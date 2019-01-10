@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_bluetooth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="蓝牙"
+        android:textColor="#000"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_bt_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="开关状态 "
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_bluetooth"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bluetooth" />
+
+    <TextView
+        android:id="@+id/tv_bt_switch_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:textColor="#000"
+        android:text="x"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_bt_switch"
+        app:layout_constraintStart_toEndOf="@+id/tv_bt_switch"
+        app:layout_constraintTop_toTopOf="@+id/tv_bt_switch" />
+
+    <TextView
+        android:id="@+id/tv_bt_connect_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="x"
+        android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_bt_connect"
+        app:layout_constraintStart_toEndOf="@id/tv_bt_connect"
+        app:layout_constraintTop_toTopOf="@+id/tv_bt_connect" />
+
+    <TextView
+        android:id="@+id/tv_bt_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:text="连接状态 "
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_bt_switch"
+        app:layout_constraintTop_toTopOf="@+id/tv_bt_switch" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="wifi"
+        android:textColor="#000"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_bluetooth"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/tv_wf_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="开关状态"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/tv_wf_switch_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:textColor="#000"
+        android:text="x"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_wf_switch"
+        app:layout_constraintStart_toEndOf="@+id/tv_wf_switch"
+        app:layout_constraintTop_toTopOf="@+id/tv_wf_switch" />
+
+    <TextView
+        android:id="@+id/tv_wf_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:text="连接状态"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_wf_switch"
+        app:layout_constraintStart_toEndOf="@+id/tv_wf_switch"
+        app:layout_constraintTop_toTopOf="@+id/tv_wf_switch"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tv_wf_connect_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:textColor="#000"
+        android:text="x"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_wf_connect"
+        app:layout_constraintStart_toEndOf="@+id/tv_wf_connect"
+        app:layout_constraintTop_toTopOf="@+id/tv_wf_connect" />
+
+    <TextView
+        android:id="@+id/tv_wf_signal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:text="信号强度"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_wf_connect"
+        app:layout_constraintStart_toEndOf="@+id/tv_wf_connect"
+        app:layout_constraintTop_toTopOf="@+id/tv_wf_connect"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tv_wf_signal_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:textColor="#000"
+        android:text="x"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_wf_signal"
+        app:layout_constraintStart_toEndOf="@+id/tv_wf_signal"
+        app:layout_constraintTop_toTopOf="@+id/tv_wf_signal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textSize="10sp"
+        android:text="x 为占位符，相关状态改变时才会显示"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
