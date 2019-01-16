@@ -17,7 +17,7 @@ android:name="com.pico.wifiandbluetoothdemo.MainActivity"
 ```
 
 ## Interface
-Write these methods in a script, and set the script as a component of a GameObject named setState.
+Write these methods in a script, and set the script as a component of a GameObject named "setState".
 refer to section 3 of the Guideline above.
 
 setBluetoothState(string bluetoothState){};<br>
