@@ -2,28 +2,13 @@
 
 Note: Regarding java package creation and usege, please refer to [the Guideline](https://github.com/PicoSupport/PicoSupport/blob/master/How_to_use_JAR_file_in_Unity_project_on_Pico_device.docx)
 
-# Introduce
-
+## Introduction
 Receive broadcasts of bluetooth and wifi switches and connection status changes and pass the status to Unity
 
-Use Method
+## Class Name
+android:name="com.pico.wifiandbluetoothdemo.MainActivity"
 
-1.Create a new GameObject in the unity project and name it SetState
-
-2.Mount the new script on SetState, and the script name is arbitrary
-
-3.Create five new methods in the script and implement them
-
-```
-setBluetoothState(string bluetoothState){};
-setBluetoothConnectionState(string bluetoothConnectionState){};
-setWifiState(string wifiState){};
-setWifiConnectionState(string wifConnectionState){};
-setWifiRssiState(string wifiRssiState){};
-```
-
-4.Add permissions to the Manifest
-
+## Permission
 ```
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -31,3 +16,12 @@ setWifiRssiState(string wifiRssiState){};
 <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
 ```
 
+## Interface
+Write these methods in a script, and set the script as a component of a GameObject named setState.
+refer to section 3 of the Guideline above.
+
+setBluetoothState(string bluetoothState){};
+setBluetoothConnectionState(string bluetoothConnectionState){};
+setWifiState(string wifiState){};
+setWifiConnectionState(string wifConnectionState){};
+setWifiRssiState(string wifiRssiState){};
