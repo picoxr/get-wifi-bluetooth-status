@@ -21,9 +21,9 @@ Write these methods in a script, and set the script as a component of a GameObje
 refer to section 3 of the Guideline above.
 
 ```
-setBluetoothState(string bluetoothState){};<br>
-setBluetoothConnectionState(string bluetoothConnectionState){}; <br>
-setWifiState(string wifiState){}; <br>
-setWifiConnectionState(string wifConnectionState){}; <br>
+setBluetoothState(string bluetoothState){};
+setBluetoothConnectionState(string bluetoothConnectionState){};
+setWifiState(string wifiState){}; 
+setWifiConnectionState(string wifConnectionState){};
 setWifiRssiState(string wifiRssiState){};
 ```
