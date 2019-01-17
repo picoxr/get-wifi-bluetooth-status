@@ -30,7 +30,7 @@ setWifiConnectionState(string wifiConnectionState){};
 setWifiRssiState(string wifiRssiState){};
 ```
 **Message List**  
-bluetoothState:
+bluetoothState  
 ```
 bt_state_off  
 bt_state_turning_on  
