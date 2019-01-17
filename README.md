@@ -20,7 +20,7 @@ android:name="com.pico.wifiandbluetoothdemo.MainActivity"
 Usage: this JAR file send message to Unity app, so in Unity project, it's required to implmement these methods in a script and set the script as a component of a GameObject named "setState" to receive the message from JAR files.
 Please refer to section 3 (Method 3) of the Guideline above.
 
-* Method List
+**Method List**  
 
 ```
 setBluetoothState(string bluetoothState){};
@@ -29,7 +29,7 @@ setWifiState(string wifiState){};
 setWifiConnectionState(string wifiConnectionState){};
 setWifiRssiState(string wifiRssiState){};
 ```
-* Message List  
+**Message List**
 bluetoothState:
 ```
 bt_state_off  
