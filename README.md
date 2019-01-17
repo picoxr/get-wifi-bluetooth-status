@@ -44,7 +44,6 @@ bt_connection_state_connecting
 bt_connection_state_disconnected  
 bt_connection_state_disconnecting  
 ```
-
 wifiState  
 ```
 wf__state_connected  
@@ -58,7 +57,6 @@ wf_connection_state_disabled
 wf_connection_state_disabling 
 wf_connection_state_unknown
 ```
-
 wifiRssiState  
 ```
 String.valueOf(level)  
