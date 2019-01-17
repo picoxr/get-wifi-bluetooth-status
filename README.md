@@ -26,18 +26,30 @@ Method List
 setBluetoothState(string bluetoothState){};
 setBluetoothConnectionState(string bluetoothConnectionState){};
 setWifiState(string wifiState){}; 
-setWifiConnectionState(string wifConnectionState){};
+setWifiConnectionState(string wifiConnectionState){};
 setWifiRssiState(string wifiRssiState){};
 ```
 Message List<br>
 \>>bluetoothState:
-bt_state_off  bt_state_turning_on bt_state_on bt_state_turning_off
+bt_state_off  
+bt_state_turning_on 
+bt_state_on 
+bt_state_turning_off
 \>>bluetoothConnectionState
-bt_connection_state_connected bt_connection_state_connecting  bt_connection_state_disconnected  bt_connection_state_disconnecting
+bt_connection_state_connected 
+bt_connection_state_connecting  
+bt_connection_state_disconnected  
+bt_connection_state_disconnecting
 
 \>>wifiState
-wf__state_connected wf_state_disconnected 
-wf_connection_state_enabling  wf_connection_state_enabled wf_connection_state_disabled  wf_connection_state_disabling wf_connection_state_unknown
+wf__state_connected 
+wf_state_disconnected 
+\>>wifiConnectionState
+wf_connection_state_enabling  
+wf_connection_state_enabled 
+wf_connection_state_disabled  
+wf_connection_state_disabling 
+wf_connection_state_unknown
 
 \>>wifiRssiState
 String.valueOf(level)
