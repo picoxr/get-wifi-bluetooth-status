@@ -29,30 +29,40 @@ setWifiState(string wifiState){};
 setWifiConnectionState(string wifiConnectionState){};
 setWifiRssiState(string wifiRssiState){};
 ```
-Message List<br>
-\>>bluetoothState:
+Message List  
+bluetoothState:
+```
 bt_state_off  
 bt_state_turning_on  
 bt_state_on  
 bt_state_turning_off  
-\>>bluetoothConnectionState  
+```
+bluetoothConnectionState  
+```
 bt_connection_state_connected  
 bt_connection_state_connecting   
 bt_connection_state_disconnected  
 bt_connection_state_disconnecting  
+```
 
-\>>wifiState  
+wifiState  
+```
 wf__state_connected  
 wf_state_disconnected  
-\>>wifiConnectionState  
+```
+wifiConnectionState  
+```
 wf_connection_state_enabling   
 wf_connection_state_enabled 
 wf_connection_state_disabled  
 wf_connection_state_disabling 
 wf_connection_state_unknown
+```
 
-\>>wifiRssiState  
+wifiRssiState  
+```
 String.valueOf(level)  
+```
 
 
 
