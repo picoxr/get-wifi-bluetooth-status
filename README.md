@@ -29,7 +29,7 @@ setWifiState(string wifiState){};
 setWifiConnectionState(string wifiConnectionState){};
 setWifiRssiState(string wifiRssiState){};
 ```
-**Message List**
+**Message List**  
 bluetoothState:
 ```
 bt_state_off  
