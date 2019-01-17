@@ -6,7 +6,9 @@ Note: Regarding JAR file creation and usage, please refer to [the Guideline](htt
 Receive broadcasts of bluetooth and wifi switches and connection status changes and pass the status to Unity
 
 ## Class Name
+```
 android:name="com.pico.wifiandbluetoothdemo.MainActivity"
+```
 
 ## Permission
 ```
