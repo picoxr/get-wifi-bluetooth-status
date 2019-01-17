@@ -48,7 +48,7 @@ public class MainActivity extends UnityPlayerNativeActivityPico {
     }
 
     /**
-     * 蓝牙广播
+     * bluetooth receiver
      */
     private BroadcastReceiver mBluetoothReceiver = new BroadcastReceiver() {
         @Override
@@ -57,24 +57,24 @@ public class MainActivity extends UnityPlayerNativeActivityPico {
             if (intent.getAction().equals(BluetoothAdapter.ACTION_STATE_CHANGED)) {
                 Bundle stateBundle = intent.getExtras();
                 int message = stateBundle.getInt(BluetoothAdapter.EXTRA_STATE);
-                //蓝牙的开关状态：四种：on oning off offing
+                //bluetooth switch value：on oning off offing
                 Log.e(TAG, "ACTION_STATE_CHANGED：" + message);
                 switch (message) {
                     case BluetoothAdapter.STATE_OFF:
                         UnityPlayer.UnitySendMessage("SetState", "setBluetoothState", "bt_state_off");
-//                        tvBtSwitchState.setText("关闭");
+//                        tvBtSwitchState.setText("off");
                         break;
                     case BluetoothAdapter.STATE_TURNING_ON:
-                        UnityPlayer.UnitySendMessage("SetState", "setBluetoothState", "bt_state_turing_on");
-//                        tvBtSwitchState.setText("正在打开");
+                        UnityPlayer.UnitySendMessage("SetState", "setBluetoothState", "bt_state_turning_on");
+//                        tvBtSwitchState.setText("turning on");
                         break;
                     case BluetoothAdapter.STATE_ON:
                         UnityPlayer.UnitySendMessage("SetState", "setBluetoothState", "bt_state_on");
-//                        tvBtSwitchState.setText("打开");
+//                        tvBtSwitchState.setText("on");
                         break;
                     case BluetoothAdapter.STATE_TURNING_OFF:
-                        UnityPlayer.UnitySendMessage("SetState", "setBluetoothState", "bt_state_turing_off");
-//                        tvBtSwitchState.setText("正在关闭");
+                        UnityPlayer.UnitySendMessage("SetState", "setBluetoothState", "bt_state_turning_off");
+//                        tvBtSwitchState.setText("turning off");
                         break;
                     default:
                         break;
@@ -82,24 +82,24 @@ public class MainActivity extends UnityPlayerNativeActivityPico {
             } else if (intent.getAction().equals(BluetoothAdapter.ACTION_CONNECTION_STATE_CHANGED)) {
                 int state = intent.getIntExtra(BluetoothAdapter.EXTRA_CONNECTION_STATE,
                         BluetoothProfile.STATE_DISCONNECTED);
-                //蓝牙的连接状态
+                //bluetooth connection value
                 Log.e(TAG, "ACTION_CONNECTION_STATE_CHANGED：" + state);
                 switch (state) {
                     case 2:
                         UnityPlayer.UnitySendMessage("SetState", "setBluetoothConnectionState", "bt_connection_state_connected");
-//                        tvBtConnectState.setText("已连接");
+//                        tvBtConnectState.setText("connected");
                         break;
                     case 1:
                         UnityPlayer.UnitySendMessage("SetState", "setBluetoothConnectionState", "bt_connection_state_connecting");
-//                        tvBtConnectState.setText("正在连接");
+//                        tvBtConnectState.setText("connecting");
                         break;
                     case 0:
                         UnityPlayer.UnitySendMessage("SetState", "setBluetoothConnectionState", "bt_connection_state_disconnected");
-//                        tvBtConnectState.setText("已断开");
+//                        tvBtConnectState.setText("disconnected");
                         break;
                     case 3:
                         UnityPlayer.UnitySendMessage("SetState", "setBluetoothConnectionState", "bt_connection_state_disconnecting");
-//                        tvBtConnectState.setText("正在断开");
+//                        tvBtConnectState.setText("disconnecting");
                         break;
                     default:
                         break;
@@ -123,7 +123,7 @@ public class MainActivity extends UnityPlayerNativeActivityPico {
 
 
     /**
-     * wifi广播
+     * wifi receiver
      */
     private BroadcastReceiver mWifiReceiver = new BroadcastReceiver() {
         @Override
@@ -133,18 +133,18 @@ public class MainActivity extends UnityPlayerNativeActivityPico {
                 String networkState = info.isConnected() ? "1" : "0";
                 Log.e(TAG, "NETWORK_STATE_CHANGED_ACTION：" + networkState);
                 if (networkState.equals("1")) {
-//                    tvWfConnectState.setText("已连接");
+//                    tvWfConnectState.setText("connected");
                     UnityPlayer.UnitySendMessage("SetState", "setWifiState", "wf__state_connected");
                 } else if (networkState.equals("0")) {
                     UnityPlayer.UnitySendMessage("SetState", "setWifiState", "wf_state_disconnected");
-//                    tvWfConnectState.setText("没有网络");
+//                    tvWfConnectState.setText("has not network");
 //                    tvWfSignalState.setText("x");
                 }
             }
             if (intent.getAction().equals(WifiManager.WIFI_STATE_CHANGED_ACTION)) {
                 int state = intent.getIntExtra(WifiManager.EXTRA_WIFI_STATE,
                         WifiManager.WIFI_STATE_UNKNOWN);
-                //wifi 状态：五种，     * @see #WIFI_STATE_DISABLED
+                //wifi status：* @see #WIFI_STATE_DISABLED
                 //     * @see #WIFI_STATE_DISABLING
                 //     * @see #WIFI_STATE_ENABLED
                 //     * @see #WIFI_STATE_ENABLING
@@ -153,25 +153,25 @@ public class MainActivity extends UnityPlayerNativeActivityPico {
                 switch (state) {
                     case WifiManager.WIFI_STATE_ENABLING:
                         UnityPlayer.UnitySendMessage("SetState", "setWifiConnectionState", "wf_connection_state_enabling");
-//                        tvWfSwitchState.setText("正在打开");
+//                        tvWfSwitchState.setText("enabling");
                         break;
                     case WifiManager.WIFI_STATE_ENABLED:
                         UnityPlayer.UnitySendMessage("SetState", "setWifiConnectionState", "wf_connection_state_enabled");
-//                        tvWfSwitchState.setText("打开");
+//                        tvWfSwitchState.setText("enabled");
                         break;
                     case WifiManager.WIFI_STATE_DISABLED:
                         UnityPlayer.UnitySendMessage("SetState", "setWifiConnectionState", "wf_connection_state_disabled");
-//                        tvWfSwitchState.setText("关闭");
+//                        tvWfSwitchState.setText("disabled");
                         break;
                     case WifiManager.WIFI_STATE_DISABLING:
                         UnityPlayer.UnitySendMessage("SetState", "setWifiConnectionState", "wf_connection_state_disabling");
-//                        tvWfSwitchState.setText("正在关闭");
+//                        tvWfSwitchState.setText("disabling");
 //                        tvWfSignalState.setText("x");
 //                        tvWfConnectState.setText("x");
                         break;
                     case WifiManager.WIFI_STATE_UNKNOWN:
                         UnityPlayer.UnitySendMessage("SetState", "setWifiConnectionState", "wf_connection_state_unknown");
-//                        tvWfSwitchState.setText("未知");
+//                        tvWfSwitchState.setText("unknown");
 //                        tvWfSignalState.setText("x");
                         break;
                     default:
