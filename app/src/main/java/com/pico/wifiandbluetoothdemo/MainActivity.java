@@ -134,7 +134,7 @@ public class MainActivity extends UnityPlayerNativeActivityPico {
                 Log.e(TAG, "NETWORK_STATE_CHANGED_ACTION：" + networkState);
                 if (networkState.equals("1")) {
 //                    tvWfConnectState.setText("connected");
-                    UnityPlayer.UnitySendMessage("SetState", "setWifiState", "wf__state_connected");
+                    UnityPlayer.UnitySendMessage("SetState", "setWifiState", "wf_state_connected");
                 } else if (networkState.equals("0")) {
                     UnityPlayer.UnitySendMessage("SetState", "setWifiState", "wf_state_disconnected");
 //                    tvWfConnectState.setText("has not network");
