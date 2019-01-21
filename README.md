@@ -48,7 +48,7 @@ bt_connection_state_disconnecting
 ```
 wifiState  
 ```
-wf__state_connected  
+wf_state_connected  
 wf_state_disconnected  
 ```
 wifiConnectionState  
