@@ -21,6 +21,7 @@ android:name="com.pico.wifiandbluetoothdemo.WBStatusClass"
 
 ## Interface
 **Usage**   
+    
 This JAR file send message to Unity app, so in Unity project, it's required to implmement these methods in a script and set the script as a component of a GameObject named "GetStatus" to receive the message from JAR files.
 Please refer to section 3 (Method 3) of the Guideline above.
 
