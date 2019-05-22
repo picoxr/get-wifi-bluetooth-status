@@ -30,11 +30,13 @@ dependencies {
 }
 
 task createJarDebug(type: Jar,dependsOn: ['build']) {
-    baseName "test"
+    baseName "WBStatus"
     from 'build/intermediates/javac/debug/compileDebugJavaWithJavac/classes'
     include('**')
     exclude('**/R.class')
     exclude('**/R$*.class')
     exclude('**/BuildConfig.class')
+    exclude('**/MainActivity.class')
+    exclude('**/MainActivity$*.class')
 }
 
